@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "krish2655/static-website"
-        TAG = "latest"
-    }
+    IMAGE_NAME = "krish2655/static-website"
+    TAG = "latest"
+    KUBECONFIG = "/var/lib/jenkins/.kube/config"
+}
 
     stages {
         stage('Build Docker Image') {
